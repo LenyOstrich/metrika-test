@@ -28,9 +28,19 @@
 
 <br>
 
-<a href="#" id="messenger-link" target="_blank">
+<a href="#" id="messenger-link">
     Перейти в мессенджер
 </a>
+<script>
+    document.getElementById('lead-form').addEventListener('submit', function () {
+        ym(105841241, 'reachGoal', 'lead_sent');
+    });
+
+    document.getElementById('messenger-link').addEventListener('click', function (e) {
+        e.preventDefault();
+        ym(105841241, 'reachGoal', 'messenger_click');
+    });
+</script>
 
 </body>
 </html>
